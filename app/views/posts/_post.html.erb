@@ -1,0 +1,9 @@
+<!-- what does a post have -->
+<!-- has a url -->
+<!-- has a title -->
+
+<%= form_for @post, url: {action: 'create'} do |f| %>
+    <p><%= f.text_field :title, placeholder: "Title" %></p>
+    <p><%= f.text_field :url, placeholder: "Link" %></p>
+    <p><%= f.submit   "Create" %></p>
+<% end  %>

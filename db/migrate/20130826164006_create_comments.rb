@@ -1,7 +1,12 @@
 class CreateComments < ActiveRecord::Migration
-  def up
-  end
-
-  def down
-  end
+  def change 
+    create_table :comments do |t|
+      t.references :post
+      t.references :user
+      t.string     :content
+      t.integer    :parent_id
+      
+      t.timestamps
+    end 
+  end 
 end

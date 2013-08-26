@@ -1,0 +1,5 @@
+<div class="container">
+  <h2>create a post </h2>
+  <%= render partial: 'posts/post_form', layout: false, object: @post,
+    locals: {form_action: 'create'} %>
+</div>
